@@ -1,0 +1,35 @@
+@startuml
+
+actor       员工       as Foo1
+actor       财务主管       as Foo2
+actor       会计       as Foo3
+entity      SCS    as Foo4
+actor       出纳       as Foo5
+
+
+
+Foo1 -> Foo2 : 审批报销单(报销单)
+activate Foo1
+activate Foo2
+Foo2 -> Foo2 : 确认报销单已经员工领导审批()
+activate Foo2
+deactivate Foo2
+Foo2 -> Foo2 : 执行审批()
+activate Foo2
+deactivate Foo2
+Foo2 -> Foo2 : 返还给员工()
+Foo2 --> Foo1 :
+deactivate Foo1
+
+Foo1 -> Foo3 : 复核报销单(报销单)
+activate Foo1
+Foo3 -> Foo4 : 记录报销单()
+activate Foo4
+deactivate Foo4
+Foo3 -> Foo5 : 付款()
+activate Foo5
+Foo5 -> Foo4: 记录付款信息()
+Foo5 --> Foo1 :
+deactivate Foo1
+
+@enduml

@@ -3,7 +3,7 @@ left to right direction
 
 :开发人员:/ as developer
 :餐饮提供商:/ as foodProivder
-:会议室提供商:/ as roomProvider
+actor/ 会议室提供商 as roomProvider
 
 rectangle UMLChina {
     usecase/ 参加公开课 as UC
