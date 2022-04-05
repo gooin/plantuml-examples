@@ -3,4 +3,4 @@
 install [plantuml](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) plugin in `vscode`
 
 ### Online view
-copy and `.puml` file's content and paste in [plantuml online viewer](https://www.plantuml.com/plantuml/uml)
+copy `.puml` file's whole content and paste it in [plantuml online viewer](https://www.plantuml.com/plantuml/uml)
