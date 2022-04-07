@@ -1,0 +1,50 @@
+@startuml
+
+class           "Spatial Data Visualization" as SPV
+class           "BIM"
+class           "CIM"
+class           "WebGL"
+class           "GameEngine"
+class           "Cesium"
+class           "Cesium SuperMap" as CS
+class           "Cesium Freedo" as CF
+class           "Cesium Native" as CN
+class           "ArcGIS"
+class           "MapBox"
+class           "ThreeJS"
+class           "DeckGL"
+class           "Unreal Cesium" as UC
+class           "Unreal Freedo" as UF
+
+SPV o-- CIM
+CIM o-- BIM
+
+
+BIM o-- WebGL
+BIM o-- GameEngine
+
+WebGL o-- Cesium
+WebGL o-- ArcGIS
+WebGL o-- MapBox
+
+GameEngine o-- UC
+GameEngine o-- UF
+
+Cesium o-- CS
+Cesium o-- CF
+Cesium o-- CN
+
+ThreeJS --o CS
+ThreeJS --o CF
+ThreeJS --o CN
+ThreeJS --o ArcGIS
+ThreeJS --o MapBox
+
+DeckGL --o ArcGIS
+DeckGL --o MapBox
+
+
+
+
+
+@enduml
